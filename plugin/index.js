@@ -1,7 +1,8 @@
-const { withPlugins } = require('@expo/config-plugins');
+const { withPlugins } = require("@expo/config-plugins");
 
-const withCustomAppDelegate = require('./withCustomAppDelegate');
+const withCustomAppDelegate = require("./withCustomAppDelegate");
+const withCustomXcodeProject = require("./withCustomXcodeProject");
 
 module.exports = function withCustomPlugin(config) {
-  return withPlugins(config, [withCustomAppDelegate]);
+  return withPlugins(config, [withCustomAppDelegate, withCustomXcodeProject]);
 };
